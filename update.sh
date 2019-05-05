@@ -20,7 +20,7 @@ else
                 mkdir /home/pi/ALC/$typ
         fi
 	cp -r /home/pi/ALC-Updater/$typ/. /home/pi/ALC/$typ/
-	cp /home/pi/ALC-Updater/startup.sh /home/pi/ALC/startup.sh
+	cp /home/pi/ALC-Updater/update.sh /home/pi/ALC/update.sh
 
 	#Update autostart and wifi list
 	cp /home/pi/ALC/camera/system_files/autostart /etc/xdg/lxsession/LXDE-pi/autostart
