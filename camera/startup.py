@@ -24,7 +24,7 @@ while True:
 	try:
 		#Pause for 54 seconds once first image has been taken
 		if errorHad == False:
-			time.sleep(54)
+			time.sleep(24)
 		errorHad = False
 
 
