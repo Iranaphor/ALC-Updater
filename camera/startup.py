@@ -24,7 +24,7 @@ while True:
 	try:
 		#Pause for 24 seconds once first image has been taken
 		if errorHad == False:
-			time.sleep(24)
+			time.sleep(13)
 		errorHad = False
 
 		#Upload Image
