@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/pi
 typ=$(head -n 1 ./ALC/component)
 
 #Move to ALC-Updater and pull any updates
