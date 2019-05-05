@@ -1,9 +1,9 @@
 #!/bin/bash
 cd /home/pi
-typ=$(head -n 1 ./ALC/component)
+typ=$(head -n 1 /home/pi/ALC/component)
 
 #Move to ALC-Updater and pull any updates
-cd ./ALC-Updater
+cd /home/pi/ALC-Updater
 if (git pull | grep "Already up-to-date.")
 then
 	echo "PULL SUCCESSFUL - No change"
