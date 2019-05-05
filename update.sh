@@ -8,19 +8,19 @@ then
 	echo "PULL SUCCESSFUL - No change"
 	
 	echo "STARTING SYSTEM"
-	python ./ALC/$typ/startup.py
+	python /home/pi/ALC/$typ/startup.py
 	
 else
 	echo "PULL SUCCESSFUL - Updates found"
 	
 	#Copy system files and new startup script
-	mkdir ./ALC/$typ
-	cp -r ./ALC-Updater/$typ/. ./ALC/$typ/
-	cp ./ALC-Updater/startup.sh ./ALC/startup.sh
+	mkdir /home/pi/ALC/$typ
+	cp -r /home/pi/ALC-Updater/$typ/. /home/pi/ALC/$typ/
+	cp /home/pi/ALC-Updater/startup.sh /home/pi/ALC/startup.sh
 
 	#Update autostart and wifi list
-	cp ./ALC/camera/system_files/autostart /etc/xdg/lxsession/LXDE-pi/autostart
-	cp ./ALC/camera/system_files/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+	cp /home/pi/ALC/camera/system_files/autostart /etc/xdg/lxsession/LXDE-pi/autostart
+	cp /home/pi/ALC/camera/system_files/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 
 	#reboot
 	echo "reeboot"
