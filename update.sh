@@ -7,13 +7,11 @@ cd /home/pi/ALC-Updater
 if (git pull | grep "Already up-to-date.")
 then
 	echo "PULL SUCCESSFUL - No change"
-	mkdir /home/pi/ALC/PULL_SUCCESSFUL_NO_CHANGE
 	
 	echo "STARTING SYSTEM"
 	python /home/pi/ALC/$typ/startup.py
 else
 	echo "PULL SUCCESSFUL - Updates found"
-	mkdir /home/pi/ALC/PULL_SUCCESSFUL_UPDATES_FOUND
 	
 	#Copy system files and new startup script
 	mkdir -p /home/pi/ALC/$typ
