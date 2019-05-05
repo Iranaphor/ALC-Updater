@@ -19,7 +19,7 @@ else
 	cp ./ALC-Updater/startup.sh ./ALC/startup.sh
 
 	#Update autostart and wifi list
-	cp ./ALC/camera/system_files/autostart ./etc/xdg/lxsession/LXDE-pi/autostart
+	cp ./ALC/camera/system_files/autostart /etc/xdg/lxsession/LXDE-pi/autostart
 	cp ./ALC/camera/system_files/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 
 	#reboot
