@@ -39,7 +39,7 @@ then
 	cp ./ALC/camera/system_files/autostart ./.config/lxsession/LXDE-pi/autostart
 	cp ./ALC/camera/system_files/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 
-	reboot
+	#reboot
 else
 	echo "STARTING SYSTEM"
 	python ./ACL/$typ/startup.py
