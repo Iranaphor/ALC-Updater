@@ -22,6 +22,6 @@ else
 	cp /home/pi/ALC/camera/system_files/autostart /etc/xdg/lxsession/LXDE-pi/autostart
 	cp /home/pi/ALC/camera/system_files/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 
-	#reboot
+	reboot
 	echo "reeboot"
 fi
