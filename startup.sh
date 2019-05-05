@@ -20,7 +20,9 @@ else
 	if (git pull | grep "Already up-to-date.")
 	then
 		echo "PULL SUCCESSFUL"
-		updates=true
+		updates=false
+	else
+		updates = true
 	fi
 fi
 
