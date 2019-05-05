@@ -2,4 +2,4 @@
 @pcmanfm --desktop --profile LXDE-pi
 @xscreensaver -no-splash
 @point-rpi
-@sudo python /home/pi/ALC/camera/startup.py
+@sudo python /home/pi/ALC/camera/startup.sh
