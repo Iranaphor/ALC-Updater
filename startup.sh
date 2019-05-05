@@ -22,7 +22,7 @@ else
 		echo "PULL SUCCESSFUL"
 		updates=false
 	else
-		updates = true
+		updates=true
 	fi
 fi
 
