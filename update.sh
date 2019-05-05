@@ -15,7 +15,10 @@ else
 	echo "PULL SUCCESSFUL - Updates found"
 	
 	#Copy system files and new startup script
-	mkdir /home/pi/ALC/$typ
+	if [ ! -d /home/pi/ALC/$typ ]
+        then
+                mkdir /home/pi/ALC/$typ
+        fi
 	cp -r /home/pi/ALC-Updater/$typ/. /home/pi/ALC/$typ/
 	cp /home/pi/ALC-Updater/startup.sh /home/pi/ALC/startup.sh
 
