@@ -27,15 +27,15 @@ fi
 #Run files or restart device
 if $updates
 then
-	echo "UPDATING FILES"
+	echo "COPYING NEW FILES"
 	#Copy system files and new startup script
 	mkdir ./ALC/$typ
-	cp ./ALC-Updater/$typ/. ./ALC/$typ/
+	cp -r ./ALC-Updater/$typ/. ./ALC/$typ/
 	cp ./ALC-Updater/startup.sh ./ALC/startup.sh
 
 	#Update autostart and wifi list
-	#cp ./ALC/auto_cam/system_files/autostart ./.config/lxsession/LXDE-pi/autostart
-	#cp ./ALC/auto_cam/system_files/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+	cp ./ALC/camera/system_files/autostart ./.config/lxsession/LXDE-pi/autostart
+	cp ./ALC/camera/system_files/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 
 	#reboot
 else
