@@ -8,7 +8,7 @@ then
 	echo "PULL SUCCESSFUL - No change"
 	
 	echo "STARTING SYSTEM"
-	python ./ACL/$typ/startup.py
+	python ./ALC/$typ/startup.py
 	
 else
 	echo "PULL SUCCESSFUL - Updates found"
