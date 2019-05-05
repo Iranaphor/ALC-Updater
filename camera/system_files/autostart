@@ -2,4 +2,5 @@
 @pcmanfm --desktop --profile LXDE-pi
 @xscreensaver -no-splash
 @point-rpi
+@sudo chmod +x ./home/pi/ALC/startup.sh
 @sudo ./home/pi/ALC/startup.sh
