@@ -10,9 +10,8 @@ f.close()
 
 #Initiate connection to server
 print('delay to ensure internet is active')
-time.sleep(10)
 session = ftplib.FTP('s1.yourthought.co.uk', 'james-rpi', 'james25', timeout=None)
-time.sleep(15)
+time.sleep(10)
 
 #varialble used to ensure only 1 picture taken per minute
 errorHad = False
