@@ -33,7 +33,7 @@ while True:
 		print("LBL1")
 
 		f = open("/home/pi/ALC/camera/log.txt", "a")
-		f.write("[" + str(datetime.datetime.now()) + "] - Frame Written\r\n")
+		f.write("[" + str(datetime.datetime.now()) + "] - Frame Generated\r\n")
 		f.close()
 
 		time.sleep(1)
