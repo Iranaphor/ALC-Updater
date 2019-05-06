@@ -11,7 +11,7 @@ f.close()
 #Initiate connection to server
 print('delay to ensure internet is active')
 session = ftplib.FTP('s1.yourthought.co.uk', 'james-rpi', 'james25', timeout=None)
-time.sleep(10)
+
 
 #varialble used to ensure only 1 picture taken per minute
 errorHad = False
@@ -22,9 +22,9 @@ while True:
 	os.system("sudo fswebcam --no-banner -r 5120x3840 /home/pi/ALC/camera/frame.jpeg")
 
 	try:
-		#Pause for 24 seconds once first image has been taken
+		#Pause for 5 seconds once first image has been taken
 		if errorHad == False:
-			time.sleep(7)
+			time.sleep(3)
 		errorHad = False
 
 		#Upload Image
