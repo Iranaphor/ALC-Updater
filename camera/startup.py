@@ -62,5 +62,15 @@ while True:
 		f = open("/home/pi/ALC/camera/errlog.txt", "a")
 		f.write("[" + str(datetime.datetime.now()) + "] - Frame Upload Failed\r\n")
 		f.close()
+		
+
+	except session.all_error:
+
+		errorHad = True
+
+		f = open("/home/pi/ALC/camera/errlog.txt", "a")
+		f.write("[" + str(datetime.datetime.now()) + "] - Session Error\r\n")
+		f.close()
+		
 
 session.quit()
