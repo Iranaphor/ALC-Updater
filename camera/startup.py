@@ -19,7 +19,7 @@ errorHad = False
 while True:
 
 	#Take snapshot
-	os.system("sudo fswebcam --no-banner -r 1024x720 /home/pi/ALC/camera/frame.jpeg")
+	os.system("sudo fswebcam --no-banner -r 1024x720 −−set brightness=50% /home/pi/ALC/camera/frame.jpeg")
 
 	try:
 		#Pause
