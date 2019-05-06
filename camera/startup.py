@@ -16,6 +16,10 @@ session = ftplib.FTP('s1.yourthought.co.uk', 'james-rpi', 'james25', timeout=Non
 #varialble used to ensure only 1 picture taken per minute
 errorHad = False
 
+os.system("sudo usermod -a -G video pi")
+os.system("sudo modprobe uvcvideo")
+os.system("sudo rmmod uvcvideo")
+os.system("sudo modprobe uvcvideo")
 os.system("v4l2-ctl -c exposure_auto=1 -c exposure_absolute=10")
 
 while True:
