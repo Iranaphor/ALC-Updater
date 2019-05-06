@@ -19,20 +19,18 @@ errorHad = False
 while True:
 
 	#Take snapshot
-	os.system("sudo fswebcam --no-banner -r 5120x3840 /home/pi/ALC/camera/frame.jpeg")
+	os.system("sudo fswebcam --no-banner -r 1024x720 /home/pi/ALC/camera/frame.jpeg")
 
 	try:
-		#Pause for 5 seconds once first image has been taken
-		if errorHad == False:
-			time.sleep(3)
-		errorHad = False
-
+		#Pause
+		time.sleep(1)
+		
 		#Upload Image
 		file = open('/home/pi/ALC/camera/frame.jpeg', 'rb')
 		session.storbinary('STOR frame.jpeg', file)
 		file.close()
-
-		#Pause to allow image upload
+		
+		#Pause to allow log upload
 		time.sleep(1)
 
 		#Write to log
@@ -44,6 +42,7 @@ while True:
 		file = open('/home/pi/ALC/camera/log.txt', 'rb')
 		session.storbinary('STOR log.txt', file)
 		file.close()
+		
 		#Pause to allow log upload
 		time.sleep(1)
 
@@ -56,7 +55,6 @@ while True:
 	except ftplib.error_temp:
 
 		errorHad = True
-		print("RETRY")
 
 		f = open("/home/pi/ALC/camera/errlog.txt", "a")
 		f.write("[" + str(datetime.datetime.now()) + "] - Frame Upload Failed\r\n")
