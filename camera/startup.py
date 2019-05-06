@@ -16,6 +16,8 @@ session = ftplib.FTP('s1.yourthought.co.uk', 'james-rpi', 'james25', timeout=Non
 #varialble used to ensure only 1 picture taken per minute
 errorHad = False
 
+os.system("v4l2-ctl -c exposure_auto=1 -c exposure_absolute=10")
+
 while True:
 
 	#Take Snapshot ActiveCam
