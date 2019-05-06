@@ -19,10 +19,10 @@ errorHad = False
 while True:
 
 	#Take Snapshot ActiveCam
-	#os.system("sudo fswebcam --no-banner -r 5120x3840 −−set brightness=50% /home/pi/ALC/camera/frame.jpeg")
+	os.system("sudo fswebcam --no-banner -r 5120x3840 /home/pi/ALC/camera/frame.jpeg")
 	
 	#Taks Snapshot MS USB Webcam
-	os.system("sudo fswebcam --set contrast=1 --set saturation=100 -r 1280x720 --no-banner --crop 1280x570,0x150 /home/pi/ALC/camera/frame.jpeg")
+	#os.system("sudo fswebcam --set contrast=1 --set saturation=100 -r 1280x720 --no-banner --crop 1280x570,0x150 /home/pi/ALC/camera/frame.jpeg")
 	
 	try:
 		#Pause
