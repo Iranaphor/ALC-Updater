@@ -63,7 +63,7 @@ while True:
 		f.write("[" + str(datetime.datetime.now()) + "] - Frame Uploaded\r\n")
 		f.close()
 
-	except (ftplib.error_temp as e):
+	except (ftplib.error_temp, e):
 
 		errorHad = True
 
@@ -73,7 +73,7 @@ while True:
 		f.close()
 		
 
-	except (ftplib.all_error as e):
+	except (ftplib.all_error, e):
 
 		errorHad = True
 
@@ -83,7 +83,7 @@ while True:
 		f.close()
 		
 
-	except (Exception as e):
+	except (Exception, e):
 
 		errorHad = True
 
