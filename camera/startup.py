@@ -69,7 +69,6 @@ while True:
 
 		f = open("/home/pi/ALC/camera/errlog.txt", "a")
 		f.write("[" + str(datetime.datetime.now()) + "] - Frame Upload Failed\r\n")
-		f.write("[" + str(datetime.datetime.now()) + "] - " + str(e) + "\r\n")
 		f.close()
 		
 
@@ -79,7 +78,6 @@ while True:
 
 		f = open("/home/pi/ALC/camera/errlog.txt", "a")
 		f.write("[" + str(datetime.datetime.now()) + "] - Session Error\r\n")
-		f.write("[" + str(datetime.datetime.now()) + "] - " + str(e) + "\r\n")
 		f.close()
 		
 
@@ -89,7 +87,6 @@ while True:
 
 		f = open("/home/pi/ALC/camera/errlog.txt", "a")
 		f.write("[" + str(datetime.datetime.now()) + "] - Exception Error\r\n")
-		f.write("[" + str(datetime.datetime.now()) + "] - " + str(e) + "\r\n")
 		f.close()
 		
 
