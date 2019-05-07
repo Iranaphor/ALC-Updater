@@ -32,7 +32,9 @@ while True:
 	
 	try:
 		#Pause
-		time.sleep(1)
+		if errorhad == False:
+			time.sleep(10)	
+		errorHad = False
 		
 		#Upload Image
 		file = open('/home/pi/ALC/camera/frame.jpeg', 'rb')
