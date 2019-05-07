@@ -83,4 +83,14 @@ while True:
 		f.close()
 		
 
+	except Exception as e:
+
+		errorHad = True
+
+		f = open("/home/pi/ALC/camera/errlog.txt", "a")
+		f.write("[" + str(datetime.datetime.now()) + "] - Exception Error\r\n")
+		f.write("[" + str(datetime.datetime.now()) + "] - " + e + "\r\n")
+		f.close()
+		
+
 session.quit()
