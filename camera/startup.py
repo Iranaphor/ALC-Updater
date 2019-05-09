@@ -71,8 +71,9 @@ while True:
 		f.write("[" + str(datetime.datetime.now()) + "] - Frame Upload Failed\r\n")
 		f.close()
 		
+		pass
 
-	except ftplib.all_error:
+	except ftplib.all_errors:
 
 		errorHad = True
 
@@ -80,14 +81,17 @@ while True:
 		f.write("[" + str(datetime.datetime.now()) + "] - Session Error\r\n")
 		f.close()
 		
+		pass
 
-	except (Exception, e):
+	except:
 
 		errorHad = True
 
 		f = open("/home/pi/ALC/camera/errlog.txt", "a")
 		f.write("[" + str(datetime.datetime.now()) + "] - Exception Error\r\n")
 		f.close()
+		
+		pass
 		
 
 session.quit()
