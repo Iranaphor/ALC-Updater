@@ -22,7 +22,7 @@ os.system("sudo rmmod uvcvideo")
 os.system("sudo modprobe uvcvideo")
 os.system("v4l2-ctl -c sharpness=1 -c exposure_auto=1 -c exposure_absolute=10")
 
-while True:
+#while True:
 
 	#Take Snapshot ActiveCam
 	os.system("sudo fswebcam --no-banner -r 5120x3840 /home/pi/ALC/camera/frame.jpeg")
